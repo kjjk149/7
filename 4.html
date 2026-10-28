@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            font-size: 12px;
+        }
+
+        /* Navigation bar */
+        nav {
+            margin: 2px 16px;
+            background-color: #fff0d7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 65px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #7182a7;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #a43c36;
+        }
+
+        /* Main page layout */
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 36px;
+            margin: 3px 45px 0 51px;
+        }
+
+        .food-section {
+            margin-bottom: 13px;
+        }
+
+        .food-section h2,
+        .sidebar h2 {
+            background-color: #fff49a;
+            color: #a43c36;
+            text-align: center;
+            font-size: 16px;
+            padding: 4px;
+            margin: 10px 0 13px;
+        }
+
+        /* Food cards */
+        .food-card {
+            background-color: #fbf1fc;
+            border-radius: 8px;
+            padding: 13px;
+            margin: 0 59px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .food-card img {
+            width: 36%;
+            height: 126px;
+            object-fit: cover;
+        }
+
+        .food-card p {
+            flex: 1;
+            line-height: 1.25;
+            font-size: 11px;
+        }
+
+        /* Popular foods sidebar */
+        .sidebar {
+            background-color: #fbf1fc;
+            padding: 18px 14px;
+            min-height: 100%;
+        }
+
+        .sidebar h2 {
+            margin-top: 10px;
+            margin-bottom: 14px;
+        }
+
+        .sidebar h3 {
+            background-color: #65a3a3;
+            color: white;
+            font-size: 12px;
+            margin: 12px 0;
+            padding: 1px 3px;
+        }
+
+        .sidebar ul {
+            padding-left: 26px;
+            margin-bottom: 12px;
+        }
+
+        /* Smaller screens */
+        @media (max-width: 800px) {
+            nav {
+                gap: 20px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                margin: 10px 15px;
+                gap: 10px;
+            }
+
+            .food-card {
+                margin: 0;
+            }
+
+            .food-card img {
+                width: 40%;
+            }
+
+            .sidebar {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .food-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .food-card img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#bengali">BENGALI</a>
+        <a href="#gujarati">GUJARATI</a>
+        <a href="#mughlai">MUGHLai</a>
+        <a href="#punjabi">PUNJABI</a>
+        <a href="#south-indian">SOUTH INDIAN</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Main food sections -->
+        <main>
+
+            <section class="food-section" id="bengali">
+                <h2>Bengali Food</h2>
+                <div class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500"
+                        alt="Indian Bengali food platter">
+                    <p>
+                        Bengali cuisine is appreciated for its fabulous use of
+                        panchphoron, a term used to refer to the five essential
+                        spices, namely mustard, fenugreek seed, cumin seed,
+                        aniseed, and black cumin seed. The specialty of Bengali
+                        food lies in the perfect blend of sweet and spicy flavors.
+                    </p>
+                </div>
+            </section>
+
+            <section class="food-section" id="gujarati">
+                <h2>Gujarati Food</h2>
+                <div class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=500"
+                        alt="Gujarati Indian food">
+                    <p>
+                        The traditional Gujarati food is primarily vegetarian
+                        and has a high nutritional value. The typical Gujarati
+                        thali consists of varied kinds of lip-smacking dishes.
+                        Gujarati cuisine has so much to offer and each dish
+                        has an absolutely different cooking style.
+                    </p>
+                </div>
+            </section>
+
+            <section class="food-section" id="mughlai">
+                <h2>Mughlai Food</h2>
+                <div class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500"
+                        alt="Mughlai Indian food">
+                    <p>
+                        Mughlai cuisine is one of the most popular cuisines,
+                        whose origin can be traced back to the times of
+                        Mughal Empire. Mughlai cuisine consists of the dishes
+                        that were prepared in the kitchens of the royal
+                        Mughal Emperors. Indian cuisine is predominantly
+                        influenced by the cooking style practiced during
+                        the Mughal era.
+                    </p>
+                </div>
+            </section>
+
+            <section class="food-section" id="punjabi">
+                <h2>Punjabi Food</h2>
+                <div class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500"
+                        alt="Punjabi curry and flatbread">
+                    <p>
+                        The cuisine of Punjab has an enormous variety of
+                        mouth-watering vegetarian as well as non-vegetarian
+                        dishes. The spice content ranges from minimal to
+                        pleasant to high. Punjabi food is usually relished
+                        by people of all communities. In Punjab, home cooking
+                        differs from the restaurant cooking style.
+                    </p>
+                </div>
+            </section>
+
+            <section class="food-section" id="south-indian">
+                <h2>South Indian Cuisine</h2>
+                <div class="food-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500"
+                        alt="South Indian dosa and idli">
+                    <p>
+                        The cuisine of South India is known for its light,
+                        low-calorie appetizing dishes. The traditional food
+                        of South India is mainly rice based. The cuisine is
+                        famous for its wonderful mixing of rice and lentils
+                        to prepare yummy lip-smacking dosas, vadas, idlis
+                        and uttapams.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Popular Foods</h2>
+
+            <h3>North Indian</h3>
+            <ul>
+                <li>Chole Bhature</li>
+                <li>Samosa</li>
+                <li>Jalebi</li>
+                <li>Dahi Bhalla</li>
+            </ul>
+
+            <h3>South Indian</h3>
+            <ul>
+                <li>Idli</li>
+                <li>Masala Dosa</li>
+                <li>Pongal</li>
+                <li>Bisi Bele Bath</li>
+            </ul>
+
+            <h3>Mughalai</h3>
+            <ul>
+                <li>Chicken Biryani</li>
+                <li>Butter Chicken</li>
+                <li>Rogan Josh</li>
+            </ul>
+        </aside>
+
+    </div>
+
+</body>
+</html>
+```
